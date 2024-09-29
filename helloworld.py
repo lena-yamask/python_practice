@@ -61,4 +61,4 @@ print(hanpuku)
 
 time = "10"
 place = "会議室 A"
-print(f"{time}時から{place}で会議がおこなわれる。") #f文字列という使い方
+print(f"{time}時から{place}で会議がおこなわれる。") #f文字列という使い方。"の直前にfをかく
