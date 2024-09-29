@@ -39,4 +39,5 @@ print(num)
 #Pythonでは、何もないことを「None」で表す
 #print(num)
 s = "Hello, World!"
-print(s[0])
+print(s[0]) #indexは０から文字列の長さを超えない整数。
+print(s[-1]) #負の数を指定すると、末尾を出力できる
