@@ -66,3 +66,9 @@ print(f"{time}時から{place}で会議がおこなわれる。")  # f文字列�
 
 str = input()  # 入力文字列を１行取得してstrに入れる
 str2 = input().strip()  # 前後の空白を取り除いて取得
+str3 = input().split()  # 文字列を分割して取得
+
+input_line = int(input())
+for i in range(input_line):
+    s = input().rstrip().split(' ')
+    print("hello = "+s[0]+" , world = "+s[1])
