@@ -44,3 +44,12 @@ print(s[-1]) #負の数を指定すると、末尾を出力できる
 print(s[1:4]) #s[i:j]でiからj-1までの部分文字列の取得
 print(s[:5]) #s[:j]で０からj-1までを取得
 print(s[1:]) #s[i:]でiから末尾までを取得
+
+print(len(s)) #lenで文字列の長さを取得
+
+s1 = "Hello"
+s2 = "World!"
+print(s1 + s2, s1, s2) #+で文字列を結合できる
+s3 = "abc "
+s3 += "def"
+print(s3)
