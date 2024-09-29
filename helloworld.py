@@ -41,3 +41,6 @@ print(num)
 s = "Hello, World!"
 print(s[0]) #indexは０から文字列の長さを超えない整数。
 print(s[-1]) #負の数を指定すると、末尾を出力できる
+print(s[1:4]) #s[i:j]でiからj-1までの部分文字列の取得
+print(s[:5]) #s[:j]で０からj-1までを取得
+print(s[1:]) #s[i:]でiから末尾までを取得
