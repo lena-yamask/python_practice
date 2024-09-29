@@ -53,3 +53,8 @@ print(s1 + s2, s1, s2) #+で文字列を結合できる
 s3 = "abc "
 s3 += "def"
 print(s3)
+
+hanpuku = "abc"
+print(hanpuku * 3) #＊の回数分、反復
+hanpuku *= 2
+print(hanpuku)
