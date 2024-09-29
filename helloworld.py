@@ -62,3 +62,6 @@ print(hanpuku)
 time = "10"
 place = "会議室 A"
 print(f"{time}時から{place}で会議がおこなわれる。") #f文字列という使い方。"の直前にfをかく
+
+str = input() #入力文字列を１行取得してstrに入れる
+str2 = input().strip() #前後の空白を取り除いて取得
