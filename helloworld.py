@@ -38,3 +38,5 @@ print(num)
 
 #Pythonでは、何もないことを「None」で表す
 #print(num)
+s = "Hello, World!"
+print(s[0])
