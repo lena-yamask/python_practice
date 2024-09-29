@@ -64,11 +64,17 @@ time = "10"
 place = "会議室 A"
 print(f"{time}時から{place}で会議がおこなわれる。")  # f文字列という使い方。"の直前にfをかく
 
-str = input()  # 入力文字列を１行取得してstrに入れる
-str2 = input().strip()  # 前後の空白を取り除いて取得
-str3 = input().split()  # 文字列を分割して取得
+# str = input()  # 入力文字列を１行取得してstrに入れる
+# str2 = input().strip()  # 前後の空白を取り除いて取得
+# str3 = input().split()  # 文字列を分割して取得
 
-input_line = int(input())
-for i in range(input_line):
-    s = input().rstrip().split(' ')
-    print("hello = "+s[0]+" , world = "+s[1])
+# input_line = int(input())
+# for i in range(input_line):
+#     s = input().rstrip().split(' ')
+#     print("hello = "+s[0]+" , world = "+s[1])
+time = 10
+print(str(time) + "時")  # 数字->文字列
+
+strtoint = "3"
+print(int(strtoint) * 2)  # 文字列ー＞数字（整数）
+print(float(strtoint) * 2.0)  # 文字列ー＞数字（浮動小数点数）
