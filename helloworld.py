@@ -58,3 +58,7 @@ hanpuku = "abc"
 print(hanpuku * 3) #＊の回数分、反復
 hanpuku *= 2
 print(hanpuku)
+
+time = "10"
+place = "会議室 A"
+print(f"{time}時から{place}で会議がおこなわれる。") #f文字列という使い方
