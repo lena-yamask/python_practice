@@ -116,3 +116,18 @@ li3 = ["apple", "cat", "banana"]
 print(sorted(li3, reverse=True))  # 降順でソート（上書きしない）
 li3.sort(reverse=True)  # 降順で破壊的ソート（上書き）
 # 異なる型が混在するリストは、ソート/破壊的ソートはできない
+
+li4 = ["A", "B", "C"]
+print(" ".join(li))
+print(",".join(li))
+print("".join(li))
+# s.join(li) 文字列 s を区切り文字として、リスト li の各要素を結合
+
+# 文字列ー＞リスト
+s = "hello"
+print(list(s))
+
+s = "apple,banana,cat"
+print(s.split(","))  # ['', 'pple,b', 'n', 'n', ',c', 't']
+# s.split(t) 文字列 s を文字列 t で区切ったときにできる
+# 各文字列を要素とするリストを生成できる
