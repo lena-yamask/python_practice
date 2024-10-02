@@ -131,3 +131,24 @@ s = "apple,banana,cat"
 print(s.split(","))  # ['', 'pple,b', 'n', 'n', ',c', 't']
 # s.split(t) 文字列 s を文字列 t で区切ったときにできる
 # 各文字列を要素とするリストを生成できる
+
+# タプル
+# イミュータブルなので、変更不可
+# 追加・変更などしたい場合はタプルを新しく作る
+lunchset = ("chees burger", 750)
+# パッキング　複数の値をタプルにまとめること
+# ()は省略可能。要素がない場合は省略不可。
+print(lunchset)
+print(lunchset[1])
+# tuple[i:j] タプルのiからj-1番目の要素を取得
+food, price = lunchset
+# アンパッキング　タプルの各要素を分解して代入
+# 取り出し先の名前をわかりやすくつけることができる
+tuple(range(10))  # 0から９までの整数を格納したタプルを作成
+
+alphabet = tuple("ABCDEFG")
+first, second, *rest, last = alphabet
+print(first)  # A
+print(rest)  # C, D, E, F
+print(last)  # G
+# 先頭や末尾の要素だけ取り出したい時に使う＊
