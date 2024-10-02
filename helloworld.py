@@ -137,7 +137,7 @@ print(s.split(","))  # ['', 'pple,b', 'n', 'n', ',c', 't']
 # 追加・変更などしたい場合はタプルを新しく作る
 lunchset = ("chees burger", 750)
 # パッキング　複数の値をタプルにまとめること
-# ()は省略可能。要素がない場合は省略不可。
+# ()は省略可能。要素がない or 複数のタプルを同時に書く場合は省略不可。
 print(lunchset)
 print(lunchset[1])
 # tuple[i:j] タプルのiからj-1番目の要素を取得
@@ -152,3 +152,12 @@ print(first)  # A
 print(rest)  # C, D, E, F
 print(last)  # G
 # 先頭や末尾の要素だけ取り出したい時に使う＊
+
+# リストとタプル、タプル同士などを組み合わせる事も可能
+menu = [("burger", 110, 234.5), ("potato", 150, 226.7)]
+# この例は、リストの中にタプル２つを入れ子にしている。カッコは省略不可。
+menu.append(("shake", 120, 218.9))
+# menu自体はリストなので、追加・変更・削除ができる
+print(menu[1])
+name, price, calorie = menu[1]
+print(calorie)
