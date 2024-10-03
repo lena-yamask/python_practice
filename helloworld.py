@@ -172,3 +172,34 @@ print(turple_a)
 # タプルの反復
 t1 = (1, "apple")
 print(t1 * 2)  # 新しいタプルとして作成されている
+
+# if文の作成
+# if 条件式:
+#   処理A
+# else:
+#   処理B
+
+# elif文
+# if 条件式:
+#   処理A
+# elif 条件式:
+#   処理B
+# else:
+#   処理C
+a = 11
+if a < 10:
+    print("1桁")
+elif a < 100:
+    print("2桁")
+else:
+    print("3桁以上")
+
+# pass文 その節を書く必要はあっても、何も処理をしたくない場合に使う
+if a < 0:
+    pass  # 何も処理をしない
+elif a < 10:
+    print("1桁")
+elif a < 100:
+    print("2桁")
+else:
+    print("3桁以上")
