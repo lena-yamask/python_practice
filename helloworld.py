@@ -161,3 +161,14 @@ menu.append(("shake", 120, 218.9))
 print(menu[1])
 name, price, calorie = menu[1]
 print(calorie)
+
+# タプルの結合
+turple_a = (2, 4, 6)
+turple_b = ("apple", "banana", "cat")
+print(turple_a + turple_b)
+turple_a += turple_b
+print(turple_a)
+
+# タプルの反復
+t1 = (1, "apple")
+print(t1 * 2)  # 新しいタプルとして作成されている
