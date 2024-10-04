@@ -72,6 +72,8 @@ print(f"{time}時から{place}で会議がおこなわれる。")  # f文字列�
 # for i in range(input_line):
 #     s = input().rstrip().split(' ')
 #     print("hello = "+s[0]+" , world = "+s[1])
+# for i in range(1, 101):
+#   print(i)
 time = 10
 print(str(time) + "時")  # 数字->文字列
 
@@ -161,3 +163,76 @@ menu.append(("shake", 120, 218.9))
 print(menu[1])
 name, price, calorie = menu[1]
 print(calorie)
+
+# タプルの結合
+turple_a = (2, 4, 6)
+turple_b = ("apple", "banana", "cat")
+print(turple_a + turple_b)
+turple_a += turple_b
+print(turple_a)
+
+# タプルの反復
+t1 = (1, "apple")
+print(t1 * 2)  # 新しいタプルとして作成されている
+
+# if文の作成
+# if 条件式:
+#   処理A
+# else:
+#   処理B
+
+# elif文
+# if 条件式:
+#   処理A
+# elif 条件式:
+#   処理B
+# else:
+#   処理C
+a = 11
+if a < 10:
+    print("1桁")
+elif a < 100:
+    print("2桁")
+else:
+    print("3桁以上")
+
+# pass文 その節を書く必要はあっても、何も処理をしたくない場合に使う
+if a < 0:
+    pass  # 何も処理をしない
+elif a < 10:
+    print("1桁")
+elif a < 100:
+    print("2桁")
+else:
+    print("3桁以上")
+
+# 比較演算子 文字列も使える
+a, b, c = 9, 3, 3
+
+print(a == b)
+print(a != b)
+
+print("ijk" < "ikk")
+# 辞書順に並べたときに "ijk" は "ikk" より小さいか
+
+# in演算子　A in B AはBの要素として含まれるか？
+print("a" in "abc")
+# Bはリストも使える
+# A not in B AはBの要素として含まれないか？
+print("a" not in "abc")
+
+# AかつB
+a = 1 == 1
+b = 1 >= 0
+print(a and b)
+# AまたはB
+print(a or b)
+# Aの否定
+print(not a)
+
+li = [1, 2, 3]
+# print(not 1 in li)  # 非推奨
+print(1 not in li)  # 推奨
+
+# 標準入力から取得した複数の数字をintに変換する
+# a, b, c = [int(x) for x in input().split()]
