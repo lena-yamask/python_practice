@@ -118,6 +118,8 @@ li3 = ["apple", "cat", "banana"]
 print(sorted(li3, reverse=True))  # 降順でソート（上書きしない）
 li3.sort(reverse=True)  # 降順で破壊的ソート（上書き）
 # 異なる型が混在するリストは、ソート/破壊的ソートはできない
+# 最小の値を取得　min(li3)
+# 最大の値を取得 max(li3)
 
 li4 = ["A", "B", "C"]
 print(" ".join(li))
@@ -236,3 +238,4 @@ print(1 not in li)  # 推奨
 
 # 標準入力から取得した複数の数字をintに変換する
 # a, b, c = [int(x) for x in input().split()]
+# n = [int(input()) for _ in range(5)]
