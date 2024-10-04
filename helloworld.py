@@ -72,6 +72,8 @@ print(f"{time}時から{place}で会議がおこなわれる。")  # f文字列�
 # for i in range(input_line):
 #     s = input().rstrip().split(' ')
 #     print("hello = "+s[0]+" , world = "+s[1])
+# for i in range(1, 101):
+#   print(i)
 time = 10
 print(str(time) + "時")  # 数字->文字列
 
@@ -231,3 +233,6 @@ print(not a)
 li = [1, 2, 3]
 # print(not 1 in li)  # 非推奨
 print(1 not in li)  # 推奨
+
+# 標準入力から取得した複数の数字をintに変換する
+# a, b, c = [int(x) for x in input().split()]
