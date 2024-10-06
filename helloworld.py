@@ -1,5 +1,5 @@
 import random
-print('Hello', 'World')  # 'と"はあまり違わない
+print('Hello', 'World')  # 'と"はあまり違わない 半角スペース区切りで出力
 print("test", end=",")  # 改行の代わりに、endで指定した文字で繋ぐ事もできる
 # 空文字""や半角空白" "、や"-->" も可能
 print('hogehoge')
@@ -81,6 +81,10 @@ strtoint = "3"
 print(int(strtoint) * 2)  # 文字列ー＞数字（整数）
 print(float(strtoint) * 2.0)  # 文字列ー＞数字（浮動小数点数）
 
+# f文字列
+a = "f文字列を使って埋め込む"
+print(f"{a}")
+
 li = [5, "a", ["b", "c"]]  # リストの作り方
 # 型はバラバラでも良いが推奨されず、型は統一した方がいい
 # 空リストー＞s[]など要素を何も指定しないと作れる
@@ -118,6 +122,8 @@ li3 = ["apple", "cat", "banana"]
 print(sorted(li3, reverse=True))  # 降順でソート（上書きしない）
 li3.sort(reverse=True)  # 降順で破壊的ソート（上書き）
 # 異なる型が混在するリストは、ソート/破壊的ソートはできない
+# 最小の値を取得　min(li3)
+# 最大の値を取得 max(li3)
 
 li4 = ["A", "B", "C"]
 print(" ".join(li))
@@ -236,3 +242,113 @@ print(1 not in li)  # 推奨
 
 # 標準入力から取得した複数の数字をintに変換する
 # a, b, c = [int(x) for x in input().split()]
+# n = [int(input()) for _ in range(5)]
+
+# 結果を半角空白を挟んで表示する
+# print("{} {}".format(a+b+c, s)) # a+b+cと文字列sをくっつけている
+
+# while文
+# while 条件式:
+#    処理 A  # 条件式が成立する間、この処理が繰り返される
+li, i = [1, 2, 3], 0
+while i < len(li):
+    print(li[i])
+    i += 1
+# break文
+i = 1
+while i < 5:
+    print(f"{i} 回目")
+    if i >= 2:
+        break
+    i += 1
+
+print(f"i = {i} のときにループ処理が終わりました。")
+
+# continue文　while 文によるループ処理を 1 周スキップできる
+# 奇数回のみ実行するプログラム
+i = 0
+while i < 5:
+    i += 1
+    if i % 2 == 0:
+        continue
+
+    print(f"{i} 回目")
+
+print(f"i = {i} のときにループ処理が終わりました。")
+# break 文や、continue 文は内側のループ処理にしか影響を及ぼさない
+# つまり、内側のループ処理で break 文が実行されても外側のループ処理
+# を脱出することはなく、continue 文が実行されても外側のループ処理を
+# スキップすることはない
+
+# for文
+# for 変数 in リスト:
+#     処理 A  # この処理が繰り返される
+li = [1, 2, 3]
+for a in li:
+    print(a)
+
+li = [1, 2, 3]
+for a in li:
+    if a == 2:
+        break
+
+    print(a)
+
+li = [1, 2, 3]
+for a in li:
+    if a % 2 == 1:
+        continue
+
+    print(a)
+
+grade, group = [1, 2, 3], ["A", "B", "C"]
+
+for i in grade:
+    for j in group:
+        print(f"{i}-{j}")
+
+# range(1, 6) のように range 関数を使うと、1 から 5 まで、
+# 公差 1 の等差数列を簡単に扱うことができる
+r = range(1, 6)
+for i in r:
+    print(i)
+# 数列の先頭が０の時は１番目に指定する数を省略できる
+r = range(3)
+for i in r:
+    print(i)
+
+li = ["kirishima", "rokumura", "midorikawa"]
+
+for i in range(len(li)):
+    li[i] += "san"
+
+print(li)
+
+# 1<=i<7の範囲で公差２の等差数列を作る
+for i in range(1, 7, 2):
+    print(i)  # 1 3 5
+# 公差には負の数を設定することもできる
+for i in range(7, 1, -2):
+    print(i)  # 7 5 3
+
+# enumerate
+# リスト li のインデックスと、そのインデックスに対応する要素の組を取得できる
+# 取得できる値は、(インデックス, 要素) の組を表すタプルを、イテラブルの長さ分もった値
+li = ["apple", "banana", "melon"]
+e = enumerate(li)
+for t in e:
+    print(t)
+# (0, 'apple')
+# (1, 'banana')
+# (2, 'melon')
+
+# for文でアンパック
+for i, a in enumerate(li):
+    print(i, a)
+# 0 apple
+# 1 banana
+# 2 melon
+
+# whileとforの使い分け
+# while 文: 繰り返す回数を柔軟に決めたいとき
+# for 文: 繰り返す回数が明確に決まっているとき
