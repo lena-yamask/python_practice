@@ -126,9 +126,9 @@ li3.sort(reverse=True)  # 降順で破壊的ソート（上書き）
 # 最大の値を取得 max(li3)
 
 li4 = ["A", "B", "C"]
-print(" ".join(li))
-print(",".join(li))
-print("".join(li))
+print(" ".join(li4))
+print(",".join(li4))
+print("".join(li4))
 # s.join(li) 文字列 s を区切り文字として、リスト li の各要素を結合
 
 # 文字列ー＞リスト
@@ -356,7 +356,7 @@ for i, a in enumerate(li):
 # 半角スペース区切りで1と1を出力
 print("{} {}".format(1, 1))
 # 改行のみ出力
-print()
+# print()
 
 # 内包表記　li = [i for i in range(100)]
 # forで生成するリストと同じ長さのリストを作れる
@@ -369,21 +369,51 @@ b = [x for x in range(1, 101) if x % 11 == 0]
 print(b)
 
 # 標準入力
-a = list(input())
+# a = list(input())
 print(a)
 # 受け取った文字列の各文字が要素になっているリストを得ることができる
 
 # 半角スペース区切りで複数の数字がある文字列を整数値のリストに変換
-li = []  # このリストに切り出した整数を追加していく
-a = input().split()  # 入力値を空白文字で区切って、リストを生成する
+# li = []  # このリストに切り出した整数を追加していく
+# a = input().split()  # 入力値を空白文字で区切って、リストを生成する
 
-for x in a:
-    li.append(int(x))
-    # 各文字列を整数に変換して、リスト li に追加する
+# for x in a:
+#   li.append(int(x))
+# 各文字列を整数に変換して、リスト li に追加する
 
 print(li)
 # li = [int(x) for x in input().split()] と同じ
 
 # mapを使って、複数の入力値を整数型に変換する
-a, b, c = map(int, input().split())
-print(a, b, c)
+# a, b, c = map(int, input().split())
+# print(a, b, c)  # a=1, b=2, c=3
+# 1 2 3 のような入力値を整数値のリストとして扱う
+# a = list(map(int, input().split()))
+# print(a)  # [1, 2, 3]
+
+# 複数行の入力を受け取る
+# n = int(input())  # これよりうしろに n 行の入力がある
+# li = [0] * n  # このリストで入力を受ける
+# for i in range(n):
+#     li[i] = int(input())
+# li = [int(input()) for i in range(n)] でもOK
+# また、iは_として使わない変数であることを明示するので下記のコードが良い
+# li = [int(input()) for _ in range(n)
+
+# 複数行・複数列の入力値を受け取る
+# 3 行数
+# 1 2 3 4
+# 5 6 7 8
+# 9 10 11 12
+# n = int(input())
+# li = [0] * n
+# for i in range(n):
+#    a = []
+#    for x in input().split():
+#        a.append(int(x))
+#    li[i] = a
+# print(li)
+
+# 内包表記で書いた場合
+# li = [[] for _ in range(n)] # 空の要素をn個持つリストを生成
+# li = [[int(x) for x in input.split()] for _ in range(n)]
