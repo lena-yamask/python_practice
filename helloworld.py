@@ -417,3 +417,24 @@ print(li)
 # 内包表記で書いた場合
 # li = [[] for _ in range(n)] # 空の要素をn個持つリストを生成
 # li = [[int(x) for x in input.split()] for _ in range(n)]
+
+# joinメソッド
+print(",".join(s))  # カンマ区切りでリストなどのsを出力できる
+# 下記と同じ意味
+# for i in range(10):
+#   if i != 9:
+#     print(input_strings[i], end = ",")
+#   else:
+#     print(input_strings[i])
+
+# formatメソッド
+# print("{}|{}|{}".format(S1, S2, S3))
+# 3桁ごとに区切り　print("{0:,}".format(N)) Nは整数の時
+
+# 3 * 3の出力
+# for i in range(len(N)):
+#     print(N[i], end="")
+#     if i % 3 == 2:
+#         print()
+#     else:
+#         print(" ", end="")
