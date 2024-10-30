@@ -1,2 +1,2 @@
 N = int(input())
-print("{:03d}".format(N))
+print("{:>3}".format(N))
